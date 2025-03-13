@@ -14,8 +14,8 @@
     <Viewport3D>
         <!-- Камера -->
         <Viewport3D.Camera>
-            <PerspectiveCamera Position="0, 0, 3" LookDirection="0, 0, -1" UpDirection="0, 1, 0" FieldOfView="90"/>
-            <!--<OrthographicCamera Position="0, 0, 3" LookDirection="0, 0, -1" UpDirection="0, 1, 0" Width="6"/>-->
+            <!--<PerspectiveCamera Position="0, 0, 3" LookDirection="0, 0, -1" UpDirection="0, 1, 0" FieldOfView="90"/>-->
+            <OrthographicCamera Position="0, 0, 3" LookDirection="0, 0, -1" UpDirection="0, 1, 0" Width="6"/>
         </Viewport3D.Camera>
 
         <!-- Освітлення -->
@@ -34,14 +34,15 @@
                 <Transform3DGroup>
                     <RotateTransform3D>
                         <RotateTransform3D.Rotation>
-                            <AxisAngleRotation3D Axis="1, 0, 0" Angle="45"/>
+                            <AxisAngleRotation3D Axis="1, 0, 0" Angle="35"/>
                         </RotateTransform3D.Rotation>
                     </RotateTransform3D>
                     <RotateTransform3D>
                         <RotateTransform3D.Rotation>
-                            <AxisAngleRotation3D x:Name="rotationY" Axis="0, 1, 0" Angle="45"/>
+                            <AxisAngleRotation3D x:Name="rotationY" Axis="0, 1, 0" Angle="50"/>
                         </RotateTransform3D.Rotation>
                     </RotateTransform3D>
+                    <TranslateTransform3D OffsetY="-0.25" />
                     <!--<ScaleTransform3D ScaleX="1.2" ScaleY="0.8" ScaleZ="1"/>-->
                 </Transform3DGroup>
             </ModelVisual3D.Transform>
@@ -52,14 +53,11 @@
                         <GeometryModel3D.Geometry>
                             <MeshGeometry3D>
                                 <MeshGeometry3D.Positions>
-                                    -1, 1, 0  1, 1, 0  0, 1, -1.5
+                                    -1,1,0  1,1,0  0,1,-1.5
                                 </MeshGeometry3D.Positions>
                                 <MeshGeometry3D.TriangleIndices>
                                     0 1 2
                                 </MeshGeometry3D.TriangleIndices>
-                                <MeshGeometry3D.Normals>
-                                    0, 0, 1  0, 0, 1  0, 0, 1
-                                </MeshGeometry3D.Normals>
                             </MeshGeometry3D>
                         </GeometryModel3D.Geometry>
                         <GeometryModel3D.Material>
@@ -72,14 +70,11 @@
                         <GeometryModel3D.Geometry>
                             <MeshGeometry3D>
                                 <MeshGeometry3D.Positions>
-                                    -1, -1, 0  1, -1, 0  0, -1, -1.5
+                                    -1,-1,0  1,-1,0  0,-1,-1.5
                                 </MeshGeometry3D.Positions>
                                 <MeshGeometry3D.TriangleIndices>
                                     0 2 1
                                 </MeshGeometry3D.TriangleIndices>
-                                <MeshGeometry3D.Normals>
-                                    0, 0, 1  0, 0, 1  0, 0, 1
-                                </MeshGeometry3D.Normals>
                             </MeshGeometry3D>
                         </GeometryModel3D.Geometry>
                         <GeometryModel3D.Material>
@@ -92,8 +87,8 @@
                         <GeometryModel3D.Geometry>
                             <MeshGeometry3D>
                                 <MeshGeometry3D.Positions>
-                                    -1,-1,0  1,-1,0 -1,1,0
-                                    1,-1,0 1,1,0 -1,1,0
+                                    -1,-1,0  1,-1,0  -1,1,0
+                                    1,-1,0   1,1,0   -1,1,0
                                 </MeshGeometry3D.Positions>
                                 <MeshGeometry3D.TriangleIndices>
                                     0 1 2 3 4 5
@@ -113,8 +108,8 @@
                         <GeometryModel3D.Geometry>
                             <MeshGeometry3D>
                                 <MeshGeometry3D.Positions>
-                                    0,1,-1.5 0,-1,-1.5 -1,1,0
-                                    0,-1,-1.5 -1,-1,0 -1,1,0
+                                    0,1,-1.5   0,-1,-1.5  -1,1,0
+                                    0,-1,-1.5  -1,-1,0    -1,1,0
                                 </MeshGeometry3D.Positions>
                                 <MeshGeometry3D.TriangleIndices>
                                     0 1 2 3 4 5
@@ -134,8 +129,8 @@
                         <GeometryModel3D.Geometry>
                             <MeshGeometry3D>
                                 <MeshGeometry3D.Positions>
-                                    0,-1,-1.5 1,1,0 1,-1,0
-                                    0,-1,-1.5 0,1,-1.5 1,1,0
+                                    0,-1,-1.5  1,1,0     1,-1,0
+                                    0,-1,-1.5  0,1,-1.5  1,1,0
                                 </MeshGeometry3D.Positions>
                                 <MeshGeometry3D.TriangleIndices>
                                     0 1 2 3 4 5
