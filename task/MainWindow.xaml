@@ -22,7 +22,7 @@
         <ModelVisual3D>
             <ModelVisual3D.Content>
                 <Model3DGroup>
-                    <AmbientLight Color="LightSlateGray"/>
+                    <DirectionalLight Color="White" Direction="0,0,-1"/>
                     <SpotLight Color="White" Position="3,3,3" Direction="-1,-1,-1" InnerConeAngle="35" OuterConeAngle="90" /> 
                 </Model3DGroup>
             </ModelVisual3D.Content>
@@ -39,7 +39,7 @@
                     </RotateTransform3D>
                     <RotateTransform3D>
                         <RotateTransform3D.Rotation>
-                            <AxisAngleRotation3D x:Name="rotationY" Axis="0, 1, 0" Angle="-50"/>
+                            <AxisAngleRotation3D x:Name="rotationY" Axis="0, 1, 0" Angle="45"/>
                         </RotateTransform3D.Rotation>
                     </RotateTransform3D>
                     <!--<ScaleTransform3D ScaleX="1.2" ScaleY="0.8" ScaleZ="1"/>-->
@@ -140,10 +140,18 @@
                                 <MeshGeometry3D.TriangleIndices>
                                     0 1 2 3 4 5
                                 </MeshGeometry3D.TriangleIndices>
+                                <MeshGeometry3D.TextureCoordinates>
+                                    0,0 1,0 0,1 0,0 1,1 1,0
+                                </MeshGeometry3D.TextureCoordinates>
                             </MeshGeometry3D>
                         </GeometryModel3D.Geometry>
                         <GeometryModel3D.Material>
-                            <DiffuseMaterial Brush="Violet"/>
+                            <!--<DiffuseMaterial Brush="Violet"/>-->
+                            <DiffuseMaterial>
+                                <DiffuseMaterial.Brush>
+                                    <ImageBrush ImageSource="/img/texture.bmp" TileMode="None" Stretch="Fill"/>
+                                </DiffuseMaterial.Brush>
+                            </DiffuseMaterial>
                         </GeometryModel3D.Material>
                     </GeometryModel3D>
 
